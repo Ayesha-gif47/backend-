@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("hope4life")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9988f167f61fc6be83d8038f098f82a9b07dcf3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af40a5fd61c27a1d9f537d5dfe8678c4489b223c")]
 [assembly: System.Reflection.AssemblyProductAttribute("hope4life")]
 [assembly: System.Reflection.AssemblyTitleAttribute("hope4life")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

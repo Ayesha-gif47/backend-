@@ -46,6 +46,18 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.8.20, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.8.20, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.8.20, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[4.12.1, )"

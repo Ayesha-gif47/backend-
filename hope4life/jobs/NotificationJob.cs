@@ -7,7 +7,7 @@ namespace hope4life.Jobs;
 
 public interface INotificationJob
 {
-    Task InsertMonthlyCycleAsync();   // 1‑taareekh
+    Task InsertMonthlyCycleAsync();   // 1‑Method
     Task InsertDayBasedAsync();       // 2‑days‑before + same‑day
     Task ProcessPendingAsync();       // send + flag
 }
@@ -90,36 +90,6 @@ public class NotificationJob : INotificationJob
         }
         await _db.SaveChangesAsync();
     }
-
-    /* -------- helpers -------- */
-    /* private async Task AddReminderRows(DateTime date, string type, string template)
-     {
-         var assigns = await _db.DonorAssignments
-                                .Where(a => a.DonationDate.Date == date)
-                                .ToListAsync();
-
-         foreach (var a in assigns)
-         {
-             bool exists = await _db.Notifications.AnyAsync(n =>
-                 n.DonorId == a.DonorId &&
-                 n.PatientId == a.PatientId &&
-                 n.MessageType == type);
-
-             if (!exists)
-             {
-                 _db.Notifications.Add(new Notification
-                 {
-                     NotificationId = Guid.NewGuid(),
-                     DonorId = a.DonorId,
-                     PatientId = a.PatientId,
-                     MessageType = type,
-                     Message = string.Format(template, a.DonationDate),
-                     IsEmailSend = false,
-                     CreatedOn = DateTime.UtcNow
-                 });
-             }
-         }
-     }*/
     private async Task AddReminderRows(DateTime date, string type, string template)
     {
         var assigns = await _db.DonorAssignments

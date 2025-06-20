@@ -3,7 +3,7 @@ using hope4life.Models;
 using hope4life.Services;
 using Microsoft.EntityFrameworkCore;
 using Hangfire;
-using hope4life.Jobs;     // naya job namespace
+using hope4life.Jobs;     // new job namespace
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -58,7 +58,7 @@ using (var scope = app.Services.CreateScope())
 {
     var emailService = scope.ServiceProvider.GetRequiredService<IEmailService>();
     await emailService.SendEmailAsync(
-        "zainairfan11@gmail.com",         // 👉 yahan apna email daalo
+        "zainairfan11@gmail.com",         // enter your email
         "Test Email from Program.cs",
         "<b>This is a test email sent without a controller.</b>");
 }
